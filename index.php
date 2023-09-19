@@ -64,13 +64,18 @@ if(isset($_POST['email']) || isset($_POST['password'])) {
 
 }
 ?>
+        <div id="background">
+        <video autoplay muted loop>
+            <source src="/assets/bg.mp4" type="video/mp4">
+        </video>
+    </div>
         <main id="container">
             <form action="" method="POST" id="login_form">
                 <div id="form_header">
                     <h1>Login</h1>
                     <i id="mode_icon" class="fa-solid fa-moon"> </i>
                 </div>
-                <div id="social_media">
+                <!-- <div id="social_media">
                     <a href="#">
                         <img
                             src="assets/social-icons-login/facebook.png"
@@ -89,7 +94,7 @@ if(isset($_POST['email']) || isset($_POST['password'])) {
                             alt="Github Logo"
                         />
                     </a>
-                </div>
+                </div> -->
                 <div id="inputs">
                     <div class="input-box">
                         <label for="email">
