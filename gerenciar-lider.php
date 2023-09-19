@@ -1,3 +1,9 @@
+<?php
+
+include('protect.php');
+
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,7 +25,7 @@
     <!-- INICIO NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">CENA BNH</a>
+            <a class="navbar-brand" href="dashboard.php">CENA BNH</a>
             <button class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
@@ -34,7 +40,7 @@
                     <li class="nav-item">
                         <a class="nav-link active"
                             aria-current="page"
-                            href="index.html">
+                            href="dashboard.php">
                             Inicio
                         </a>
                     </li>
@@ -64,13 +70,26 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Administrativo</a>
+                    </li>
                 </ul>
-                <form method="get" class="d-flex"
+                <div id="session">
+                    <span>Bem vindo,&nbsp</span>
+                    <?php echo $_SESSION['name']."!"; ?>
+                    </div>               
+            </div>
+            <a href="logout.php" id="btnsair">Sair</a>
+        </div>
+    </nav>
+    <!-- FIM NAVBAR -->
+    <div class="buscarlider">
+    <form method="get" class="d-flex"
                     role="search" nome="search"
                     action="gerenciar-lider.php">
                     <input class="form-control me-2"
                         type="search"
-                        placeholder="Nome do Líder"
+                        placeholder="Digite o nome do lider para buscar..."
                         aria-label="Search"
                         name="searchlider" />
                     <button class="btn btn-outline-success"
@@ -79,11 +98,7 @@
                         Buscar
                     </button>
                 </form>
-            </div>
-        </div>
-    </nav>
-    <!-- FIM NAVBAR -->
-
+                </div>
      <!-- DIV LISTA CADASTRO -->
      <div class="gerlider">
         <?php include_once "config.php"; ?>

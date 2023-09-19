@@ -47,3 +47,44 @@ div.gerlider {
     justify-content: space-between;
     align-items: center;
 }
+
+#session {
+    width: 100%; /* Certifique-se de que a div ocupa toda a largura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buscarlider {
+    background-color: rgb(238, 238, 238);
+    max-width: 80%; /* Largura máxima de 600 pixels */
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    padding: 30px;
+    -webkit-box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.15);
+    position: relative; /* Adicione position: relative; para permitir o posicionamento absoluto da imagem */
+}
+
+div.container-fluid a#btnsair {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    box-shadow: 4px 4px #000000 0.8;
+    transition: all 0.3s;
+}
+div.container-fluid a#btnsair:hover {
+    background-color: #b02a37;
+    transform: translateY(-2px);
+}
